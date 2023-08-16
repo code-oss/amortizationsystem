@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Flash Able - Most Trusted Admin Template</title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+    	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Flash Able Bootstrap admin template made using Bootstrap 4 and it has huge amount of ready made feature, UI components, pages which completely fulfills any dashboard needs." />
+    <meta name="keywords"
+        content="admin templates, bootstrap admin templates, bootstrap 4, dashboard, dashboard templets, sass admin templets, html admin templates, responsive, bootstrap admin templates free download,premium bootstrap admin templates, Flash Able, Flash Able bootstrap admin template">
+    <meta name="author" content="Codedthemes" />
+
+    <!-- Favicon icon -->
+    <link rel="icon" href="../assets/images/amortization.ico" type="image/x-icon">
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="../assets/fonts/fontawesome/css/fontawesome-all.min.css">
+    <!-- animation css -->
+    <link rel="stylesheet" href="../assets/plugins/animation/css/animate.min.css">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <style>
+        /* body { overflow-y: hidden; } */
+        .cl-data{
+            padding: 10px 20px;
+            border-radius: 0.25rem;
+            font-size: 14px;
+            margin-bottom: 5px;
+            margin-right: 10px;
+            color: #fff;
+            background-color: #3949AB;
+            border-color: #3544a0;
+            transition: all 0.3s ease-in-out;
+        }
+        .cl-data:hover{
+            color: aliceblue;
+            
+        }
+        .sl-btn{
+            border-radius: 10%;
+            padding: 4px 4px;
+            background-color:#d6e01d ;
+            margin-right: 2px;
+            color: #0d0c0c;
+            font-size: 12px;
+        }
+        .nav-btn{
+            border-radius: 10%;
+            padding: 4px 8px;
+            background-color:#F57C00 ;
+            margin-right: 2px;
+        }
+        .nav-btn2{
+            color: #fff;
+            border-radius: 10%;
+            padding: 4px 8px;
+            background-color:#2ca961 ;
+            margin-right: 2px;
+        }
+        .nav-btn:hover{
+            color: #fff;
+            background-color: #000;
+            transition: all 0.3s ease-in-out;
+        }
+        .pgs{
+            margin-right:5px;
+        }
+    </style>
+</head>
+
+<body class="">
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+    <!-- [ navigation menu ] start -->
+    <nav class="pcoded-navbar menupos-fixed menu-light brand-blue ">
+        <div class="navbar-wrapper ">
+            <div class="navbar-brand header-logo">
+                <a href="index.html" class="b-brand">
+                    <img src="../assets/images/amortization.ico" alt="" class="logo images">
+                    <img src="../assets/images/amortization.ico" alt="" class="logo-thumb images">
+                </a>
+                <a class="mobile-menu" id="mobile-collapse"><span></span></a>
+            </div>
+            <div class="navbar-content scroll-div">
+                <ul class="nav pcoded-inner-navbar">
+
+                    <li class="nav-item">
+                        <a th:href="@{/home/dashboard}"  class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+                    </li>
+
+                    <li class="nav-item pcoded-hasmenu">
+                        <a class="nav-link"><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Manage Clients</span></a>
+                        <ul class="pcoded-submenu">
+                            <li ><a th:href="@{/home/viewClients}" class="">View Clients</a></li>
+                            <li ><a th:href="@{/home/addClient}" class="">Add Client</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a th:href="@{/home/amosetting}" class="nav-link"><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Amortization settings</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a th:href="@{/home/amo_settings_data}" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Transaction Statistical History</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a th:href="@{/home/dashboard}" class="nav-link"><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Export Data</span></a>
+                    </li>
+                    <li class="nav-item pcoded-hasmenu">
+                        <a class="nav-link"><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span class="pcoded-mtext">Collective Data</span></a>
+                        <ul class="pcoded-submenu">
+                            <li class=""><a th:href="@{/home/dashboard}" class="" target="_blank">Add Collective Data</a></li>
+                            <li class=""><a th:href="@{/home/dashboard}" class="" target="_blank">View Collective Data</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- [ navigation menu ] end -->
+
+    <!-- [ Header ] start -->
+    <header class="navbar pcoded-header navbar-expand-lg navbar-light headerpos-fixed">
+        <div class="m-header">
+            <a class="mobile-menu" id="mobile-collapse1" ><span></span></a>
+            <a href="index.html" class="b-brand">
+                <img src="../assets/images/amortization.ico" alt="" class="logo images">
+                <img src="../assets/images/amortization.ico" alt="" class="logo-thumb images">
+            </a>
+        </div>
+        <a class="mobile-menu" id="mobile-header" >
+            <i class="feather icon-more-horizontal"></i>
+        </a>
+        <div class="collapse navbar-collapse">
+            <a href="#!" class="mob-toggler"></a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <div class="main-search open">
+                        <div class="input-group">
+                            <input type="text" id="m-search" class="form-control" placeholder="Search . . .">
+                            <a class="input-group-append search-close">
+                                <i class="feather icon-x input-group-text"></i>
+                            </a>
+                            <span class="input-group-append search-btn btn btn-primary">
+                                <i class="feather icon-search input-group-text"></i>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <h4>TRANSACTION HISTORY IN SYSTEM</h4>
+            <ul class="navbar-nav ml-auto">
+
+                <li>
+                    <div class="dropdown drp-user">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon feather icon-settings"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right profile-notification">
+                            <div class="pro-head">
+                                <img src="../assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
+                                <span>System Administrator</span>
+                                <a th:href="@{/home/logout}"  class="dud-logout" title="Logout">
+                                    <i class="feather icon-log-out"></i>
+                                </a>
+                            </div>
+                            <ul class="pro-body">
+                                <li><a th:href="@{/home/logout}"  class="dropdown-item"><i class="feather icon-lock"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <!-- [ breadcrumb ] start -->
+                            <div class="page-header" style="display: none;">
+                                <div class="page-block">
+                                    <div class="row align-items-center" >
+                                        <div class="col-md-12">
+                                            <div class="page-header-title">
+                                                <h5 class="m-b-10">Navigate All Clients</h5>
+                                            </div>
+                                            <ul class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                                                <li class="breadcrumb-item" id="real-time"></li>
+                                                <li class="breadcrumb-item"><a href="#!">Filtered Data</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [ breadcrumb ] end -->
+                            <!-- [ Main Content ] start -->
+                            <div class="row">
+   
+                                <div class="col-xl-12">
+                                    <div class="card" style="height: 600px;">
+
+                                        <div class="card-body table-border-style">
+                                            <div class="table-responsive">
+                                                <table class = "table table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Client ID</th>
+                                                            <th>
+                                                                <a th:href="@{'/pages1/' + ${currentPage} + '?sortField=code&sortDir=' + ${reverseSortDir}}">
+                                                                Code</a>
+                                                            </th>
+                                                            <th>
+                                                            <a th:href="@{'/pages1/' + ${currentPage} + '?sortField=c_id&sortDir=' + ${reverseSortDir}}">
+                                                                Names</a>
+                                                            </th>
+                                                            <th>Location</th>
+                                                            <th>interest</th>
+                                                            <th>loan_amt</th>
+                                                            <th>no_years</th>
+                                                            <th>month_pay</th>
+                                                            <th>total_payment</th>
+                                                            <th>status</th>
+                                                            <th>amt_pend</th>
+                                                            <th>Loan Date</th>
+                                                            <th>profit</th>
+                                                            <th>  Delete</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr th:each="amosets : ${listAmosets}">
+                                                            <td th:text="${amosets.code}"></td>
+                                                            <td th:text="${amosets.c_id}"></td>
+                                                            <td th:text="${amosets.f_name}"></td>
+                                                            <td th:text="${amosets.location}"></td>
+                                                            <td th:text="${amosets.interest}"></td>
+                                                            <td th:text="${amosets.loan_amt}"></td>
+                                                            <td th:text="${amosets.no_years}"></td>
+                                                            <td th:text="${amosets.month_pay}"></td>
+                                                            <td th:text="${amosets.total_payment}"></td>
+                                                            <td th:text="${amosets.status}"></td>
+                                                            <td th:text="${amosets.amt_pend}"></td>
+                                                            <td th:text="${amosets.date_e}"></td>
+                                                            <td th:text="${amosets.profit}"></td>
+                                                            <td>
+                                                                <a th:href="@{/deleteAmoset/{code}(code=${amosets.code})}" class="cl-data btn-danger">Delete</a>                                                               
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <div  th:if = "${totalPages > 1}">
+                                                    <div class = "row col-sm-10" style="display: flex;justify-content: center;" >
+
+                                                        <div class = "col-sm-2">
+                                                           Total Records <p style="color: #3949AB;font-weight: bold;"> [[${totalItems}]]</p> 
+                                                        </div>
+
+                                                        <div class = "col-sm-1" style="display: flex;justify-content: center;">
+                                                            <p class="pgs">Pages</p>
+                                                            <span th:each="i: ${#numbers.sequence(1, totalPages)}">
+                                                                <a class="nav-btn" th:if="${currentPage != i}" th:href="@{'/pages1/' + ${i}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">[[${i}]]</a>
+                                                                <span class="nav-btn2"  th:unless="${currentPage != i}">[[${i}]]</span>  &nbsp; &nbsp;
+                                                            </span>
+                                                        </div>
+
+                                                        <div class = "col-sm-1">
+                                                            <a th:if="${currentPage < totalPages}" th:href="@{'/pages1/' + ${currentPage + 1}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Next</a>
+                                                            <span class="sl-btn" th:unless="${currentPage < totalPages}">Next</span>
+                                                        </div>
+                                                        
+                                                        <div class="col-sm-1">
+                                                            <a th:if="${currentPage < totalPages}" th:href="@{'/pages1/' + ${totalPages}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Last</a>
+                                                            <span class="sl-btn" th:unless="${currentPage < totalPages}">Last</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [ Main Content ]  end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- [ Main Content ] end -->
+
+    <!-- Warning Section start -->
+    <!-- Older IE warning message -->
+    <!--[if lt IE 11]>
+        <div class="ie-warning">
+            <h1>Warning!!</h1>
+            <p>You are using an outdated version of Internet Explorer, please upgrade
+               <br/>to any of the following web browsers to access this website.
+            </p>
+            <div class="iew-container">
+                <ul class="iew-download">
+                    <li>
+                        <a href="http://www.google.com/chrome/">
+                            <img src="../assets/images/browser/chrome.png" alt="Chrome">
+                            <div>Chrome</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.mozilla.org/en-US/firefox/new/">
+                            <img src="../assets/images/browser/firefox.png" alt="Firefox">
+                            <div>Firefox</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.opera.com">
+                            <img src="../assets/images/browser/opera.png" alt="Opera">
+                            <div>Opera</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.apple.com/safari/">
+                            <img src="../assets/images/browser/safari.png" alt="Safari">
+                            <div>Safari</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                            <img src="../assets/images/browser/ie.png" alt="">
+                            <div>IE (11 & above)</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p>Sorry for the inconvenience!</p>
+        </div>
+    <![endif]-->
+    <!-- Warning Section Ends -->
+
+    <!-- Required Js -->
+    <script src="../assets/js/vendor-all.min.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/pcoded.min.js"></script>
+    <script>
+
+        function display_ct7() {
+        var x = new Date()
+        var ampm = x.getHours( ) >= 12 ? ' PM' : ' AM';
+        hours = x.getHours( ) % 12;
+        hours = hours ? hours : 12;
+        hours=hours.toString().length==1? 0+hours.toString() : hours;
+
+        var minutes=x.getMinutes().toString()
+        minutes=minutes.length==1 ? 0+minutes : minutes;
+
+        var seconds=x.getSeconds().toString()
+        seconds=seconds.length==1 ? 0+seconds : seconds;
+
+        var month=(x.getMonth() +1).toString();
+        month=month.length==1 ? 0+month : month;
+
+        var dt=x.getDate().toString();
+        dt=dt.length==1 ? 0+dt : dt;
+
+        var x1=month + "/" + dt + "/" + x.getFullYear();
+        x1 = x1 + " - " +  hours + ":" +  minutes + ":" +  seconds + " " + ampm;
+        document.getElementById('real-time').innerHTML = x1;
+        display_c7();
+         }
+         function display_c7(){
+        var refresh=1000; // Refresh rate in milli seconds
+        mytime=setTimeout('display_ct7()',refresh)
+        }
+        display_c7();
+
+      document.write(document.title +'<br>');
+      document.title = "Amortization System | Admin dashboard ";
+      document.write(document.title); // displays "Title has been changed!"
+   </script>
+
+</body>
+
+</html>

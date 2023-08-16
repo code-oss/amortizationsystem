@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringbootThymeleafCrudWebAppApplication<springboot-thymeleaf-crud-web-app>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "net.javaguides.springboot.SpringbootThymeleafCrudWebAppApplication",
+            "projectName": "springboot-thymeleaf-crud-web-app",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringbootThymeleafCrudWebAppApplication<springboot-thymeleaf-crud-web-app>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.code.loanapp.SpringbootThymeleafCrudWebAppApplication",
+            "projectName": "springboot-thymeleaf-crud-web-app",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

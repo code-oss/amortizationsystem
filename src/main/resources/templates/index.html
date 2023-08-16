@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<title>Amortization System | Admin dashboard </title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="Flash Able Bootstrap admin template made using Bootstrap 4 and it has huge amount of ready made feature, UI components, pages which completely fulfills any dashboard needs." />
+	<meta name="keywords"
+		content="admin templates, bootstrap admin templates, bootstrap 4, dashboard, dashboard templets, sass admin templets, html admin templates, responsive, bootstrap admin templates free download,premium bootstrap admin templates, Flash Able, Flash Able bootstrap admin template">
+	<meta name="author" content="Codedthemes" />
+
+	<!-- Favicon icon -->
+	
+	<link rel="icon" href="../assets/images/amortization.ico" type="image/x-icon">
+	<!-- fontawesome icon -->
+	<link rel="stylesheet" href="../assets/fonts/fontawesome/css/fontawesome-all.min.css">
+	<!-- animation css -->
+	<link rel="stylesheet" href="../assets/plugins/animation/css/animate.min.css">
+
+	<!-- vendor css -->
+	<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="">
+	<!-- [ Pre-loader ] start -->
+	<div class="loader-bg">
+		<div class="loader-track">
+			<div class="loader-fill"></div>
+		</div>
+	</div>
+	<!-- [ Pre-loader ] End -->
+
+	<!-- [ navigation menu ] start -->
+	<nav class="pcoded-navbar menupos-fixed menu-light brand-blue ">
+		<div class="navbar-wrapper ">
+			<div class="navbar-brand header-logo">
+				<a th:href="@{/home/dashboard}" class="b-brand">
+					<img src="../assets/images/amortization.ico" alt="" class="logo images">
+					<img src="../assets/images/amortization.ico" alt="" class="logo-thumb images">
+				</a>
+				<a class="mobile-menu" id="mobile-collapse" style="cursor: pointer;"><span></span></a>
+			</div>
+			<div class="navbar-content scroll-div">
+				<ul class="nav pcoded-inner-navbar">
+
+					<li class="nav-item">
+						<a th:href="@{/home/dashboard}" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+					</li>
+
+					<li class="nav-item pcoded-hasmenu">
+						<a style="cursor: pointer;"  class="nav-link"><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Manage Clients</span></a>
+						<ul class="pcoded-submenu">
+							<li ><a th:href="@{/home/viewClients}" class="">View Clients</a></li>
+							<li ><a th:href="@{/home/addClient}" class="">Add Client</a></li>
+						</ul>
+					</li>
+
+					<li class="nav-item">
+						<a th:href="@{/home/amosetting}" class="nav-link"><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Amortization settings</span></a>
+					</li>
+					<li class="nav-item">
+						<a th:href="@{/home/amo_settings_data}" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Transaction Statistical History</span></a>
+					</li>
+
+					<li class="nav-item">
+						<a th:href="@{/home/dashboard}" class="nav-link"><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Export Data</span></a>
+					</li>
+					<li class="nav-item pcoded-hasmenu">
+						<a style="cursor:pointer;" class="nav-link"><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span class="pcoded-mtext">Collective Data</span></a>
+						<ul class="pcoded-submenu">
+							<li class=""><a th:href="@{/home/dashboard}" class="" target="_blank">Add Collective Data</a></li>
+							<li class=""><a th:href="@{/home/dashboard}" class="" target="_blank">View Collective Data</a></li>
+						</ul>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</nav>
+	<!-- [ navigation menu ] end -->
+
+	<!-- [ Header ] start -->
+	<header class="navbar pcoded-header navbar-expand-lg navbar-light headerpos-fixed">
+		<div class="m-header">
+			<a class="mobile-menu" id="mobile-collapse1" style="cursor: pointer;"><span></span></a>
+			<a th:href="@{/home/dashboard}" class="b-brand">
+				<img src="../assets/images/amortization.ico" alt="" class="logo images">
+				<img src="../assets/images/amortization.ico" alt="" class="logo-thumb images">
+			</a>
+		</div>
+		<a style="cursor: pointer;" class="mobile-menu" id="mobile-header">
+			<i class="feather icon-more-horizontal"></i>
+		</a>
+		<div class="collapse navbar-collapse">
+			<a style="cursor: pointer;" class="mob-toggler"></a>
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<div class="main-search open">
+						<div class="input-group">
+							<input type="text" id="m-search" class="form-control" placeholder="Search . . .">
+							<a style="cursor: pointer;" class="input-group-append search-close">
+								<i class="feather icon-x input-group-text"></i>
+							</a>
+							<span class="input-group-append search-btn btn btn-primary">
+								<i class="feather icon-search input-group-text"></i>
+							</span>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<h4>LOAN AMORTIZATION SYSTEM</h4>
+			<ul class="navbar-nav ml-auto">
+
+				<li>
+					<div class="dropdown drp-user">
+						<a style="cursor: pointer;" class="dropdown-toggle" data-toggle="dropdown">
+							<i class="icon feather icon-settings"></i>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right profile-notification">
+							<div class="pro-head"th:each="adminModels : ${adminModels}">
+								<img src="../assets/images/user/user.png" class="img-radius" alt="User-Profile-Image">
+								<span style="text-transform: capitalize;">Welcome , [[${adminModels.mynames}]]</span>
+								<a th:href="@{/home/logout}" class="dud-logout" title="Logout">
+									<i class="feather icon-log-out"></i>
+								</a>
+							</div>
+							<ul class="pro-body">
+								<li><a  class="dropdown-item"><i class="feather icon-settings"></i> Profile Settings</a></li>
+								<li><a th:href="@{/home/logout}" class="dropdown-item"><i class="feather icon-lock"></i> Logout</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<!-- [ Header ] end -->
+
+	<!-- [ Main Content ] start -->
+	<div class="pcoded-main-container">
+		<div class="pcoded-wrapper">
+			<div class="pcoded-content">
+				<div class="pcoded-inner-content">
+					<div class="main-body">
+						<div class="page-wrapper">
+							<!-- [ breadcrumb ] start -->
+							<div class="page-header">
+								<div class="page-block">
+									<div class="row align-items-center">
+										<div class="col-md-12">
+											<div class="page-header-title" th:each="adminModels : ${adminModels}">
+												<h5>Welcome , [[${adminModels.mynames}]]</h5>
+											</div>
+											<ul class="breadcrumb">
+												<li class="breadcrumb-item"><a th:href="@{/home/dashboard}"><i class="feather icon-home"></i></a></li>
+												<li class="breadcrumb-item" id="real-time" style="font-size: large;"></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- [ breadcrumb ] end -->
+							<!-- [ Main Content ] start -->
+							<div class="row">
+
+								<!-- product profit start -->
+								<div class="col-xl-3 col-md-6">
+									<div class="card prod-p-card bg-c-red">
+										<div class="card-body">
+											<div class="row align-items-center m-b-25">
+												<div class="col">
+													<h6 class="m-b-5 text-white">Loan System</h6>
+													<h3 class="m-b-0 text-white">$$$</h3>
+												</div>
+												<div class="col-auto">
+													<i class="fas fa-money-bill-alt text-c-red f-18"></i>
+												</div>
+											</div>
+											<p class="m-b-0 text-white"><span class="label label-danger m-r-10">All transactions</span>Real Time Data</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-xl-3 col-md-6">
+									<div class="card prod-p-card bg-c-blue">
+										<div class="card-body">
+											<div class="row align-items-center m-b-25">
+												<div class="col">
+													<h6 class="m-b-5 text-white">All Loan Transactions</h6>
+													<h3 class="m-b-0 text-white">..$$$</h3>
+												</div>
+												<div class="col-auto">
+													<i class="fas fa-tags text-c-yellow f-18"></i>
+													
+												</div>
+											</div>
+											<p class="m-b-0 text-white"><span class="label label-primary m-r-10">All transactions</span>Real Time Data</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-xl-3 col-md-6">
+									<div class="card prod-p-card bg-c-green">
+										<div class="card-body">
+											<div class="row align-items-center m-b-25">
+												<div class="col">
+													<h6 class="m-b-5 text-white">All Clients In System</h6>
+													<h3 class="m-b-0 text-white">..$$$</h3>
+												</div>
+												<div class="col-auto">
+													<i class="fas fa-database text-c-blue f-18"></i>
+												</div>
+											</div>
+											<p class="m-b-0 text-white"><span class="label label-success m-r-10">Real Time</span>Active and Non Active</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-xl-3 col-md-6">
+									<div class="card prod-p-card bg-c-yellow">
+										<div class="card-body">
+											<div class="row align-items-center m-b-25">
+												<div class="col">
+													<h6 class="m-b-5 text-white">All Pending Loans</h6>
+													<h3 class="m-b-0 text-white">$$$..</h3>
+												</div>
+												<div class="col-auto">
+													<i class="fas fa-dollar-sign text-c-green f-18"></i>
+													
+												</div>
+											</div>
+											<p class="m-b-0 text-white"><span class="label label-warning m-r-10">Uncomplete Loans</span>Real Time Data</p>
+										</div>
+									</div>
+								</div>
+								<!-- product profit end -->
+
+								<!-- sessions-section start -->
+								<div class="col-xl-8 col-md-6">
+									<div class="card table-card">
+										<div class="card-header" style="background: white;">
+											<h5>Clients & Loan System</h5>
+										</div>
+										<div style="height:200px;width:1000px;">
+											<img src="../assets/images/amortization.ico" style="width:100%;height: 100%;">
+										</div>
+								</div>
+								<!-- sessions-section end -->
+								
+							</div>
+
+							<!-- [ Main Content ] end -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+	<!-- Required Js -->
+	<script src="../assets/js/vendor-all.min.js"></script>
+	<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../assets/js/pcoded.min.js"></script>
+	<script>
+      document.write(document.title +'<br>');
+      document.title = "Amortization System | Admin dashboard ";
+      document.write(document.title); // displays "Title has been changed!"
+   </script>
+   <script>
+	function display_ct7() {
+		var x = new Date()
+		var ampm = x.getHours( ) >= 12 ? ' PM' : ' AM';
+		hours = x.getHours( ) % 12;
+		hours = hours ? hours : 12;
+		hours=hours.toString().length==1? 0+hours.toString() : hours;
+
+		var minutes=x.getMinutes().toString()
+		minutes=minutes.length==1 ? 0+minutes : minutes;
+
+		var seconds=x.getSeconds().toString()
+		seconds=seconds.length==1 ? 0+seconds : seconds;
+
+		var month=(x.getMonth() +1).toString();
+		month=month.length==1 ? 0+month : month;
+
+		var dt=x.getDate().toString();
+		dt=dt.length==1 ? 0+dt : dt;
+
+		var x1=month + "/" + dt + "/" + x.getFullYear();
+		x1 = x1 + " - " +  hours + ":" +  minutes + ":" +  seconds + " " + ampm;
+		document.getElementById('real-time').innerHTML = x1;
+		display_c7();
+		 }
+		 function display_c7(){
+		var refresh=1000; // Refresh rate in milli seconds
+		mytime=setTimeout('display_ct7()',refresh)
+		}
+		display_c7();
+
+		const section = document.querySelector("section"),
+		overlay = document.querySelector(".overlay"),
+		showBtn = document.getElementById('show-modal'),
+		closeBtn = document.getElementById('close-btn');
+
+		  showBtn.addEventListener("click", () => section.classList.add("active"));
+
+		  overlay.addEventListener("click", () =>
+			section.classList.remove("active")
+		 );
+
+		  closeBtn.addEventListener("click", () =>
+			section.classList.remove("active")
+		  );
+</script>
+
+</body>
+
+</html>

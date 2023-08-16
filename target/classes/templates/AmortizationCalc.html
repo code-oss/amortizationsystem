@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Amortization System | Admin dashboard</title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+    	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Flash Able Bootstrap admin template made using Bootstrap 4 and it has huge amount of ready made feature, UI components, pages which completely fulfills any dashboard needs." />
+    <meta name="keywords"
+        content="admin templates, bootstrap admin templates, bootstrap 4, dashboard, dashboard templets, sass admin templets, html admin templates, responsive, bootstrap admin templates free download,premium bootstrap admin templates, Flash Able, Flash Able bootstrap admin template">
+    <meta name="author" content="Codedthemes" />
+
+    <!-- Favicon icon -->
+    <link rel="icon" href="../assets/images/amortization.ico" type="image/x-icon">
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="../assets/fonts/fontawesome/css/fontawesome-all.min.css">
+    <!-- animation css -->
+    <link rel="stylesheet" href="../assets/plugins/animation/css/animate.min.css">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        .inpts{
+            outline: none;
+            border: none;
+        }
+        .ats{
+            font-weight: 700;
+            text-transform: capitalize;
+        }
+    </style>
+   
+    <script>
+        function printDiv(selector) {
+    var content = $(selector).clone();
+    window.print();
+    $(selector).first().remove();
+}
+printDiv('.someDiv');
+        </script>
+</head>
+
+<body class="">
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+    <!-- [ navigation menu ] start -->
+    <nav class="pcoded-navbar menupos-fixed menu-light brand-blue ">
+        <div class="navbar-wrapper ">
+            <div class="navbar-brand header-logo">
+                <a href="index.html" class="b-brand">
+                    <img src="../assets/images/amortization.ico" alt="" class="logo images">
+                    <img src="../assets/images/amortization.ico" alt="" class="logo-thumb images">
+                </a>
+                <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+            </div>
+            <div class="navbar-content scroll-div">
+                <ul class="nav pcoded-inner-navbar">
+
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+                    </li>
+
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Manage Clients</span></a>
+                        <ul class="pcoded-submenu">
+                            <li class=""><a href="bc_button.html" class="">View Clients</a></li>
+                            <li class=""><a href="bc_badges.html" class="">Add Client</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="form_elements.html" class="nav-link"><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Amortization settings</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="tbl_bootstrap.html" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Transaction Statistical History</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="chart-morris.html" class="nav-link"><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Export Data</span></a>
+                    </li>
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span class="pcoded-mtext">Collective Data</span></a>
+                        <ul class="pcoded-submenu">
+                            <li class=""><a href="auth-signup.html" class="" target="_blank">Add Collective Data</a></li>
+                            <li class=""><a href="auth-signin.html" class="" target="_blank">View Collective Data</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- [ navigation menu ] end -->
+
+    <!-- [ Header ] start -->
+    <header class="navbar pcoded-header navbar-expand-lg navbar-light headerpos-fixed">
+        <div class="m-header">
+            <a class="mobile-menu" id="mobile-collapse1" href="#!"><span></span></a>
+            <a href="index.html" class="b-brand">
+                <img src="../assets/images/amortization.ico" alt="" class="logo images">
+                <img src="../assets/images/amortization.ico" alt="" class="logo-thumb images">
+            </a>
+        </div>
+        <a class="mobile-menu" id="mobile-header" href="#!">
+            <i class="feather icon-more-horizontal"></i>
+        </a>
+        <div class="collapse navbar-collapse">
+            <a href="#!" class="mob-toggler"></a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <div class="main-search open">
+                        <div class="input-group">
+                            <input type="text" id="m-search" class="form-control" placeholder="Search . . .">
+                            <a href="#!" class="input-group-append search-close">
+                                <i class="feather icon-x input-group-text"></i>
+                            </a>
+                            <span class="input-group-append search-btn btn btn-primary">
+                                <i class="feather icon-search input-group-text"></i>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <h4>LOAN AMORTIZATION SYSTEM</h4>
+            <ul class="navbar-nav ml-auto">
+
+                <li>
+                    <div class="dropdown drp-user">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon feather icon-settings"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right profile-notification">
+                            <div class="pro-head">
+                                <img src="../assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
+                                <span>John Doe</span>
+                                <a href="auth-signin.html" class="dud-logout" title="Logout">
+                                    <i class="feather icon-log-out"></i>
+                                </a>
+                            </div>
+                            <ul class="pro-body">
+                                <li><a href="#!" class="dropdown-item"><i class="feather icon-settings"></i> Settings</a></li>
+                                <li><a href="#!" class="dropdown-item"><i class="feather icon-user"></i> Profile</a></li>
+                                <li><a href="auth-signin.html" class="dropdown-item"><i class="feather icon-lock"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- [ Header ] end -->
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <!-- [ breadcrumb ] start -->
+                            <div class="page-header">
+                                <div class="page-block">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-12">
+                                            <div class="page-header-title">
+                                                <h5 class="m-b-10">Print Client</h5>
+                                            </div>
+                                            <ul class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                                                <li class="breadcrumb-item"><a href="#!">12:00:00pm</a></li>
+                                                <li class="breadcrumb-item"><a href="#!">Client Info</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [ breadcrumb ] end -->
+                            <!-- [ Main Content ] start -->
+                            <div class="row">
+                                <!-- [ form-element ] start -->
+                                <div class="col-sm-12">
+                                    <div class="card someDiv" style="height: 600px;" id="block1">
+                                        <div class="card-header">
+                                            <h5> Amortization settings</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row" style="display:flex;">
+                                                <div class="col-md-6" >
+                                                    <form action="" th:action="@{/saveAmoset}" th:object="${amoset}" method="POST">
+                                                        <label style="margin-right: 2rem;" >Amortizatioin Code : This code is Automatic </label>
+                                                        <label >Client ID : </label>
+                                                        <label class="ats" name="c_id">[[${client.id}]]</label>    
+                                                        <input class="form-control" type="text"   name="c_id" placeholder="re-enter client id" required>
+                                                        <div >
+                                                            <label for="exampleInputEmail1">First Name :</label>
+                                                            <label class="ats"  name="f_name">[[${client.firstname}]]</label> 
+                                                            <input class="form-control" type="text"   name="f_name" placeholder="re-enter cleint name or names" required> 
+                                                        </div>
+                                                        <div >
+                                                            <label for="exampleInputEmail1">Client Location :</label>
+                                                            <label class="ats" name="location" >[[${client.location}]]</label>
+                                                            <input class="form-control" type="text"   name="location" placeholder="re enter cleint location" required> 
+                                                        </div>
+                                                        <div >
+                                                            <label for="exampleInputEmail1">Scaled Interest Rate :</label>
+                                                            <input class="form-control" type="text"   name="interest" placeholder="0">
+                                                        </div>
+                                                        <div >
+                                                            <label for="exampleInputEmail1">Loan Amount :</label>
+                                                            <input class="form-control" type="text"    name="loan_amt" placeholder="0">
+                                                        </div>
+                                                         <div >
+                                                            <label for="exampleFormControlSelect1">Number Of Years :</label>
+                                                            <input class="form-control" name="no_years" />
+                                                        </div>
+                                                        <div >
+                                                            <label>Monthly Payment :</label>
+                                                            <input class="form-control" type="text"   placeholder="0" name="month_pay">
+                                                        </div> 
+                                                                                                   
+                                                </div>
+                                                <div class="col-md-6">
+                                                        <div >
+                                                            <label>Total Payment :</label>
+                                                            <input class="form-control" type="text"   placeholder="0" name="total_payment">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlSelect1">Completion Status</label>
+                                                            <select class="form-control" value="select gender" name="status" id="exampleFormControlSelect1">
+                                                                <option value="Pending">Pending</option>
+                                                                <option value="Complete">Complete</option>
+                                                            </select>
+                                                        </div>
+                                                        <div >
+                                                            <label>Amount Pending :</label>
+                                                            <input class="form-control" type="text"   placeholder="phase" name="amt_pend">
+                                                        </div>
+                                                        <div >
+                                                            <label>Date Of Loan Engagement :</label>
+                                                            <input class="form-control" type="date"   placeholder="per sq mrt" name="date_e">
+                                                        </div>
+                                                        <div >
+                                                            <label>Profit :</label>
+                                                            <input class="form-control" type="text"  placeholder="0" name="profit">
+                                                        </div>
+                                                        <button value="submit" class="btn btn-primary" style="margin-top: 1rem;" >Save Record</button>
+     
+                                                    </form>
+                                                </div>
+                                            </div>
+            
+                                        </div>
+                                    </div>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+    <!-- Warning Section start -->
+    <!-- Older IE warning message -->
+    <!--[if lt IE 11]>
+            <div class="ie-warning">
+                <h1>Warning!!</h1>
+                <p>You are using an outdated version of Internet Explorer, please upgrade
+                   <br/>to any of the following web browsers to access this website.
+                </p>
+                <div class="iew-container">
+                    <ul class="iew-download">
+                        <li>
+                            <a href="http://www.google.com/chrome/">
+                                <img src="../assets/images/browser/chrome.png" alt="Chrome">
+                                <div>Chrome</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.mozilla.org/en-US/firefox/new/">
+                                <img src="../assets/images/browser/firefox.png" alt="Firefox">
+                                <div>Firefox</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.opera.com">
+                                <img src="../assets/images/browser/opera.png" alt="Opera">
+                                <div>Opera</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.apple.com/safari/">
+                                <img src="../assets/images/browser/safari.png" alt="Safari">
+                                <div>Safari</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                                <img src="../assets/images/browser/ie.png" alt="">
+                                <div>IE (11 & above)</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p>Sorry for the inconvenience!</p>
+            </div>
+        <![endif]-->
+    <!-- Warning Section Ends -->
+
+    <!-- Required Js -->
+    <script src="../assets/js/vendor-all.min.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/pcoded.min.js"></script>
+    <script>
+      document.write(document.title +'<br>');
+      document.title = "Amortization System | Admin dashboard ";
+      document.write(document.title); // displays "Title has been changed!"
+   </script>
+</body>
+
+</html>

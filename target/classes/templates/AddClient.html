@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Amortization System | Admin dashboard</title>
+    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 11]>
+    	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Flash Able Bootstrap admin template made using Bootstrap 4 and it has huge amount of ready made feature, UI components, pages which completely fulfills any dashboard needs." />
+    <meta name="keywords"
+        content="admin templates, bootstrap admin templates, bootstrap 4, dashboard, dashboard templets, sass admin templets, html admin templates, responsive, bootstrap admin templates free download,premium bootstrap admin templates, Flash Able, Flash Able bootstrap admin template">
+    <meta name="author" content="Codedthemes" />
+
+    <!-- Favicon icon -->
+    <link rel="icon" href="../assets/images/amortization.ico" type="image/x-icon">
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="../assets/fonts/fontawesome/css/fontawesome-all.min.css">
+    <!-- animation css -->
+    <link rel="stylesheet" href="../assets/plugins/animation/css/animate.min.css">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+
+<body class="">
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+    <!-- [ navigation menu ] start -->
+    <nav class="pcoded-navbar menupos-fixed menu-light brand-blue ">
+        <div class="navbar-wrapper ">
+            <div class="navbar-brand header-logo">
+                <a th:href="@{/home/dashboard}" class="b-brand">
+                    <img src="../assets/images/amortization.ico" alt="" class="logo images">
+                    <img src="../assets/images/amortization.ico" alt="" class="logo-thumb images">
+                </a>
+                <a class="mobile-menu" id="mobile-collapse"><span></span></a>
+            </div>
+            <div class="navbar-content scroll-div">
+                <ul class="nav pcoded-inner-navbar">
+
+                    <li class="nav-item">
+                        <a th:href="@{/home/dashboard}" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+                    </li>
+
+                    <li class="nav-item pcoded-hasmenu">
+                        <a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Manage Clients</span></a>
+                        <ul class="pcoded-submenu">
+                            <li ><a th:href="@{/home/viewClients}" class="">View Clients</a></li>
+                            <li ><a th:href="@{/home/addClient}" class="">Add Client</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a th:href="@{/home/amosetting}" class="nav-link"><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Amortization settings</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a th:href="@{/home/amo_settings_data}" class="nav-link"><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Transaction Statistical History</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a th:href="@{/home/dashboard}" class="nav-link"><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Export Data</span></a>
+                    </li>
+                    <li class="nav-item pcoded-hasmenu">
+                        <a class="nav-link"><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span class="pcoded-mtext">Collective Data</span></a>
+                        <ul class="pcoded-submenu">
+                            <li class=""><a th:href="@{/home/dashboard}" class="" target="_blank">Add Collective Data</a></li>
+                            <li class=""><a th:href="@{/home/dashboard}" class="" target="_blank">View Collective Data</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!-- [ navigation menu ] end -->
+
+    <!-- [ Header ] start -->
+    <header class="navbar pcoded-header navbar-expand-lg navbar-light headerpos-fixed">
+        <div class="m-header">
+            <a class="mobile-menu" id="mobile-collapse1" href="#!"><span></span></a>
+            <a href="index.html" class="b-brand">
+                <img src="../assets/images/amortization.ico" alt="" class="logo images">
+                <img src="../assets/images/amortization.ico" alt="" class="logo-thumb images">
+            </a>
+        </div>
+        <a class="mobile-menu" id="mobile-header" href="#!">
+            <i class="feather icon-more-horizontal"></i>
+        </a>
+        <div class="collapse navbar-collapse">
+            <a href="#!" class="mob-toggler"></a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <div class="main-search open">
+                        <div class="input-group">
+                            <input type="text" id="m-search" class="form-control" placeholder="Search . . .">
+                            <a class="input-group-append search-close">
+                                <i class="feather icon-x input-group-text"></i>
+                            </a>
+                            <span class="input-group-append search-btn btn btn-primary">
+                                <i class="feather icon-search input-group-text"></i>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <h4>LOAN AMORTIZATION SYSTEM</h4>
+            <ul class="navbar-nav ml-auto">
+
+                <li>
+                    <div class="dropdown drp-user">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon feather icon-settings"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right profile-notification">
+                            <div class="pro-head">
+                                <img src="../assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
+                                <span>System Administrator</span>
+                                <a th:href="@{/home/logout}"  class="dud-logout" title="Logout">
+                                    <i class="feather icon-log-out"></i>
+                                </a>
+                            </div>
+                            <ul class="pro-body">
+                                <li><a th:href="@{/home/logout}"  class="dropdown-item"><i class="feather icon-lock"></i> Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- [ Header ] end -->
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <div class="main-body">
+                        <div class="page-wrapper">
+                            <!-- [ breadcrumb ] start -->
+                            <div class="page-header">
+                                <div class="page-block">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-12">
+                                            <div class="page-header-title">
+                                                <h5 class="m-b-10">Add Client</h5>
+                                            </div>
+                                            <ul class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
+                                                <li class="breadcrumb-item" id="real-time"></li>
+                                                <li class="breadcrumb-item"><a >Client Settings</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [ breadcrumb ] end -->
+                            <!-- [ Main Content ] start -->
+                            <div class="row">
+                                <!-- [ form-element ] start -->
+                                <div class="col-sm-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <h5>Enter Client</h5>
+                                        </div>
+                                        <div class="card-body">
+                                            <h5>Input Form</h5>
+                                            <hr>
+                                            <div class="row" style="display:flex;">
+                                                <div class="col-md-6">
+                                                    <form th:action="@{/saveClient}" th:object="${client}" method="POST">
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">First Name</label>
+                                                            <input type="text" th:field="*{firstname}" class="form-control" name="firstname" placeholder="Enter First Name">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Middle Name</label>
+                                                            <input type="text"  th:field="*{middlename}" class="form-control" name="middlename" placeholder="Enter First Name">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Sir Name</label>
+                                                            <input type="text"  th:field="*{sirname}" class="form-control" name="sirname" placeholder="Enter Sir Name">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Spouse Name</label>
+                                                            <input type="text"  th:field="*{spousename}" class="form-control" name="spousename" placeholder="Enter Spouse Name">
+                                                        </div>
+                                                         <div class="form-group">
+                                                            <label for="exampleFormControlSelect1">Civil Status</label>
+                                                            <select class="form-control" id="exampleFormControlSelect1"  th:field="*{civilstatus}" name="civilstatus">
+                                                                <option value="married">Married</option>
+                                                                <option value="single">Single</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Date Of Birth</label>
+                                                            <input type="date"  th:field="*{dateob}" class="form-control" name="dateob">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Date Registered</label>
+                                                            <input type="date"  th:field="*{datreg}" class="form-control" name="datreg">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputPassword1">Email</label>
+                                                            <input type="email"  th:field="*{email}" class="form-control" id="exampleInputPassword1" placeholder="Email" name="email">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Contact Number</label>
+                                                            <input type="text"  th:field="*{contact}" class="form-control" name="contact" placeholder="Enter Contact">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlSelect1">Gender</label>
+                                                            <select class="form-control" value="select gender" th:field="*{gender}" name="gender" id="exampleFormControlSelect1">
+                                                                <option value="male">Male</option>
+                                                                <option value="female">Female</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputEmail1">Address</label>
+                                                            <input type="text"  th:field="*{address}" class="form-control" name="address" placeholder="Enter Address">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="exampleInputPassword1">Representative</label>
+                                                            <input type="text"  th:field="*{representative}" class="form-control" id="exampleInputPassword1" placeholder="Representative" name="representative">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Agent</label>
+                                                            <input type="text"  th:field="*{agent}" class="form-control" placeholder="Agent" name="agent">
+                                                        </div>                                                    
+                                                </div>
+                                                <div class="col-md-6">
+                                                               
+                                                        <div class="form-group">
+                                                            <label>Citizenship</label>
+                                                            <input type="text"  class="form-control" placeholder="citizenship" name="citizenship">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Block</label>
+                                                            <input type="text"  class="form-control" placeholder="Block" name="block">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Lot</label>
+                                                            <input type="text"  class="form-control" placeholder="Lot" name="lot">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Phase</label>
+                                                            <input type="text"  class="form-control" placeholder="phase" name="phase">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Per Sq Mrt</label>
+                                                            <input type="text"  class="form-control" placeholder="per sq mrt" name="persq">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Location</label>
+                                                            <input type="text" class="form-control" placeholder="location" name="location">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>No. Of Lots</label>
+                                                            <input type="text"  class="form-control" placeholder="no. lots" name="nolot">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Lot Area</label>
+                                                            <input type="text"  class="form-control" placeholder="Lot Area" name="lotarea">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Tcp</label>
+                                                            <input type="text"  class="form-control" placeholder="tcp" name="tcp">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Monthly Payment</label>
+                                                            <input type="text"  class="form-control" placeholder="Monthly Payment" name="monthpay">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Payable</label>
+                                                            <input type="text"  class="form-control" placeholder="payable" name="payable">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>CTS</label>
+                                                            <input type="text"  class="form-control" placeholder="cts" name="cts">
+                                                        </div>
+
+                                                        <button type="submit" class="btn btn-primary">Create Client</button>
+                                                       
+                                                    </form>
+                                                </div>
+                                            </div>
+            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- [ Main Content ] end -->
+
+    <!-- Warning Section start -->
+    <!-- Older IE warning message -->
+    <!--[if lt IE 11]>
+            <div class="ie-warning">
+                <h1>Warning!!</h1>
+                <p>You are using an outdated version of Internet Explorer, please upgrade
+                   <br/>to any of the following web browsers to access this website.
+                </p>
+                <div class="iew-container">
+                    <ul class="iew-download">
+                        <li>
+                            <a href="http://www.google.com/chrome/">
+                                <img src="../assets/images/browser/chrome.png" alt="Chrome">
+                                <div>Chrome</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.mozilla.org/en-US/firefox/new/">
+                                <img src="../assets/images/browser/firefox.png" alt="Firefox">
+                                <div>Firefox</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.opera.com">
+                                <img src="../assets/images/browser/opera.png" alt="Opera">
+                                <div>Opera</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.apple.com/safari/">
+                                <img src="../assets/images/browser/safari.png" alt="Safari">
+                                <div>Safari</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                                <img src="../assets/images/browser/ie.png" alt="">
+                                <div>IE (11 & above)</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p>Sorry for the inconvenience!</p>
+            </div>
+        <![endif]-->
+    <!-- Warning Section Ends -->
+
+    <!-- Required Js -->
+    <script src="../assets/js/vendor-all.min.js"></script>
+    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/js/pcoded.min.js"></script>
+    <script>
+      document.write(document.title +'<br>');
+      document.title = "Amortization System | Admin dashboard ";
+      document.write(document.title); // displays "Title has been changed!"
+   </script>
+    <script>
+	function display_ct7() {
+		var x = new Date()
+		var ampm = x.getHours( ) >= 12 ? ' PM' : ' AM';
+		hours = x.getHours( ) % 12;
+		hours = hours ? hours : 12;
+		hours=hours.toString().length==1? 0+hours.toString() : hours;
+
+		var minutes=x.getMinutes().toString()
+		minutes=minutes.length==1 ? 0+minutes : minutes;
+
+		var seconds=x.getSeconds().toString()
+		seconds=seconds.length==1 ? 0+seconds : seconds;
+
+		var month=(x.getMonth() +1).toString();
+		month=month.length==1 ? 0+month : month;
+
+		var dt=x.getDate().toString();
+		dt=dt.length==1 ? 0+dt : dt;
+
+		var x1=month + "/" + dt + "/" + x.getFullYear();
+		x1 = x1 + " - " +  hours + ":" +  minutes + ":" +  seconds + " " + ampm;
+		document.getElementById('real-time').innerHTML = x1;
+		display_c7();
+		 }
+		 function display_c7(){
+		var refresh=1000; // Refresh rate in milli seconds
+		mytime=setTimeout('display_ct7()',refresh)
+		}
+		display_c7();
+
+		const section = document.querySelector("section"),
+		overlay = document.querySelector(".overlay"),
+		showBtn = document.getElementById('show-modal'),
+		closeBtn = document.getElementById('close-btn');
+
+		  showBtn.addEventListener("click", () => section.classList.add("active"));
+
+		  overlay.addEventListener("click", () =>
+			section.classList.remove("active")
+		 );
+
+		  closeBtn.addEventListener("click", () =>
+			section.classList.remove("active")
+		  );
+</script>
+</body>
+
+</html>
