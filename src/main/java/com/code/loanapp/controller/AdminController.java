@@ -23,12 +23,7 @@ import com.code.loanapp.service.AdminModelserv;
 import com.code.loanapp.service.AmosetService;
 import com.code.loanapp.service.ClientService;
 
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
+
 @Controller
 public class AdminController {
      @Autowired
@@ -84,21 +79,4 @@ public class AdminController {
 		session.invalidate();
 		return "redirect:/";
 	}
-
-   @GetMapping("/users/export/excel")
-        public void exportToExcel(HttpServletResponse response) throws IOException {
-        response.setContentType("application/octet-stream");
-        DateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
-        String currentDateTime = dateFormatter.format(new Date());
-
-        String headerKey = "Content-Disposition";
-        String headerValue = "attachment; filename=users_" + currentDateTime + ".xlsx";
-        response.setHeader(headerKey, headerValue);
-
-        List<Amoset> listAmosets = amosetService.getAllAmoset();
-
-        UserExcelExporter excelExporter = new UserExcelExporter(listAmosets);
-
-        excelExporter.export(response);
-    }
 }
