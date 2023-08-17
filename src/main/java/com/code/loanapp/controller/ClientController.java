@@ -122,7 +122,7 @@ public class ClientController {
 		model.addAttribute("reverseSortDir", sortDir.equals("asc") ? "desc" : "asc");
 		
 		model.addAttribute("listClients", listClients);
-		return "/AmortizationSettings";
+		return "AmortizationSettings";
 	}
 	@GetMapping("/pages1/{pageNos1}")
 	public String findPaginated2(@PathVariable (value = "pageNos1") int pageNo, 
