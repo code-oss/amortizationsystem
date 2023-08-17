@@ -90,7 +90,7 @@ public class AdminController {
         String headerValue = "attachment; filename=users_" + currentDateTime + ".xlsx";
         response.setHeader(headerKey, headerValue);
 
-        List<Amoset> listAmosets = amosetService.listAll();
+        List<Amoset> listAmosets = amosetService.getAllAmoset();
 
         UserExcelExporter excelExporter = new UserExcelExporter(listAmosets);
 
