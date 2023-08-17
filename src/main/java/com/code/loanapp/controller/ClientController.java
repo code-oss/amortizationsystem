@@ -168,7 +168,7 @@ public class ClientController {
 			) throws Exception {
         amosetAddService.saveAmosets(c_id,f_name,location,interest,loan_amt,no_years,month_pay,total_payment,status,
 		amt_pend,date_e,profit);
-        return "Amortizationsettings";
+        return "AmortizationSettings";
     }
 
 	@GetMapping("/showFormForLoanUpdate/{id}")
