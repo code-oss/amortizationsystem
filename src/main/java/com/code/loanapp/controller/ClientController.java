@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.core.io.InputStreamResource;
 
 import com.code.loanapp.model.Amoset;
 import com.code.loanapp.model.Clients;
@@ -23,14 +22,9 @@ import com.code.loanapp.service.AmosetAddService;
 import com.code.loanapp.service.AmosetService;
 import com.code.loanapp.service.ClientService;
 import com.code.loanapp.repository.AmosetRepository;
-import java.io.ByteArrayInputStream;
-import java.util.List;
 
 @Controller
 public class ClientController {
-
-	@Autowired
-        private ExcelGenerator excel;
 	
 	@Autowired
         private AmosetRepository amosetRepository;
@@ -208,20 +202,7 @@ public class ClientController {
 		return "redirect:/";
 	}
 	
-	//export data
 	
-	@GetMapping("/export")
-        public ResponseEntity<InputStreamResource> excelStudentReport() throws Exception {
-        List<Amoset> AmosetList = amosetRepository.findAll();
-
-        ByteArrayInputStream in = excel.exportExcel(AmosetList);
-
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Disposition", "attachment; filename=amortization.xlsx");
-
-        return ResponseEntity.ok().headers(headers).body(new InputStreamResource(in));
-
-    }
 
 	
 }
