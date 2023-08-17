@@ -143,7 +143,7 @@ public class ClientController {
 		model.addAttribute("reverseSortDir", sortDir.equals("asc") ? "desc" : "asc");
 		
 		model.addAttribute("listAmosets", listAmosets);
-		return "/AmortizationData";
+		return "AmortizationData";
 	}
 
 	//amortization settings
