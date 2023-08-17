@@ -21,14 +21,10 @@ import com.code.loanapp.model.Clients;
 import com.code.loanapp.service.AmosetAddService;
 import com.code.loanapp.service.AmosetService;
 import com.code.loanapp.service.ClientService;
-import com.code.loanapp.repository.AmosetRepository;
 
 @Controller
 public class ClientController {
-	
-	@Autowired
-        private AmosetRepository amosetRepository;
-	
+
 	@Autowired
 	private ClientService clientService;
 
@@ -201,8 +197,6 @@ public class ClientController {
 		this.amosetService.deleteAmosetById(code);
 		return "redirect:/";
 	}
-	
-	
 
 	
 }
